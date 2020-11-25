@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
 <body>
+	<main class="container">
+		<h1>Rock, Paper, Scissors</h1>
+
+		<section class="panel">
+			<div class="display">Rock, Paper, Scissors?</div>
+			<div class="buttons">
+				<button id="rock" type="submit" class="player-choice">Rock</button>
+				<button id="paper" type="submit" class="player-choice">Paper</button>
+				<button id="scissors" type="submit" class="player-choice">Scissors</button>
+			</div>
+			<section class="score-panel">
+				<div class="player-score">
+					<p>Player Score</p>
+					<h2>0</h2>
+				</div>
+
+				<div class="computer-score">
+					<p>Computer Score</p>
+					<h2>0</h2>
+				</div>
+			</section>
+			<div class="reset-button">
+				<button type="submit">Reset</button>
+			</div>
+			<div id="game-updates"></div>
+			
+		</section>
+	</main>
     
     <script src="game.js"></script>
 </body>

@@ -1,0 +1,44 @@
+html {
+	font-family: 'Indie Flower', cursive;
+	font-size: 1rem;
+	/*background: url('') bottom center;*/
+  	/*background-size: cover;*/
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+.container {
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.panel {
+	width: 50%;
+	border: 2px solid grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.display {
+	padding: 1rem;
+}
+
+.buttons {
+	width: 100%;
+	margin: 1rem;
+	display: flex;
+	justify-content: space-around;	
+}
+
+.score-panel {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}

@@ -2,13 +2,23 @@
 
 const options = ['rock', 'paper', 'scissors']
 
+// let playerChoice;
+// const buttons = document.querySelectorAll('button.player-choice');
+// buttons.forEach((button) => {
+//     button.addEventListener("click", (e) => {
+//         playerChoice = e.target.id;
+//         game();
+//     });
+// });
+
 function computerPlay() {
     let randNum = Math.floor(Math.random()* 3);
     return options[randNum];
 }
 
 function playRound(playerChoice, computerChoice) {
-    console.log(`You selected ${playerChoice} and the computer selected ${computerChoice}.`);
+    const display = document.querySelector(".display")
+    display.textContent = `You selected ${playerChoice} and the computer selected ${computerChoice}.`;
     
     let result;
     
@@ -53,8 +63,22 @@ function playRound(playerChoice, computerChoice) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 1; i <= 5; i++) {
-        let playerChoice = prompt("Rock, Paper, Scissors?").toLowerCase();
+    // while (playerScore < 5 || computerScore < 5) {
+    for (let i = 0; i <= 5; i++) {
+        
+        let playerChoice;
+        const buttons = document.querySelectorAll('button.player-choice');
+        buttons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+                let playerChoice = e.target.id;
+                // console.log(e.target.id);
+                console.log(`Inside variable value: ${playerChoice}`);
+            });
+        });
+
+        console.log(`Ouside variable value: ${playerChoice}`);
+
+        // let playerChoice = prompt("Rock, Paper, Scissors?").toLowerCase();
         let computerChoice = computerPlay();
         let result = playRound(playerChoice, computerChoice);
         if (result === "Win") {
