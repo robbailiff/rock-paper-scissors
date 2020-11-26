@@ -1,8 +1,10 @@
 html {
-	font-family: 'Indie Flower', cursive;
+	font-family: 'VT323', monospace;
 	font-size: 1rem;
-	/*background: url('') bottom center;*/
-  	/*background-size: cover;*/
+	color: green;
+    background: black;
+	/* background: url('https://i.pinimg.com/originals/45/25/f9/4525f9a44fdfe0b78d714137dad76b14.png') bottom center;
+  	background-size: cover; */
 }
 
 h1 {
@@ -13,16 +15,48 @@ h1 {
 	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 	flex-direction: column;
+	text-shadow: 0 0.2rem 1rem #0c7b46;
+	background: linear-gradient(
+		to bottom,
+		rgba(0,0,0,1) 0%,
+		rgba(0,0,0,0.5) 40%,
+		rgba(0,10,5,0.5) 50%,
+		rgba(40, 80, 50, 1) 100%
+	);
+	background-size: 100% 3px;
 }
+
+.flicker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	animation: flicker 0.12s infinite;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.95;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 
 .panel {
 	width: 50%;
+	height: 80vh;
 	border: 2px solid grey;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 	flex-direction: column;
 }
 
