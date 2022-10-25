@@ -71,6 +71,7 @@ function playRound(playerChoice, computerChoice) {
                 result = "Win";
                 break;
             }
+            break;
         case 'paper':
             if (computerChoice === 'rock') {
                 displayResult.textContent = "You win! Paper beats rock!";
@@ -81,6 +82,7 @@ function playRound(playerChoice, computerChoice) {
                 result = "Lose"
                 break;
             }
+            break;
         case 'scissors':
             if (computerChoice === 'rock') {
                 displayResult.textContent = "You lose! Rock beats scissors!";
