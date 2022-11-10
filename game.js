@@ -70,8 +70,10 @@ function playRound(playerChoice, computerChoice) {
                 displayResult.textContent = "You win! Rock beats scissors!";
                 result = "Win";
                 break;
-            }
-            break;
+            } else if (computerChoice === 'rock') {
+                displayResult.textContent = "It's a draw!";
+                result = "Draw"
+                break;
         case 'paper':
             if (computerChoice === 'rock') {
                 displayResult.textContent = "You win! Paper beats rock!";
@@ -81,8 +83,10 @@ function playRound(playerChoice, computerChoice) {
                 displayResult.textContent = "You lose! Scissors beats paper!";
                 result = "Lose"
                 break;
-            }
-            break;
+            } else if (computerChoice === 'paper') {
+                displayResult.textContent = "It's a draw!";
+                result = "Draw"
+                break;
         case 'scissors':
             if (computerChoice === 'rock') {
                 displayResult.textContent = "You lose! Rock beats scissors!";
